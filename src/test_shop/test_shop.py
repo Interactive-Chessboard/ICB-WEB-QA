@@ -2,6 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 class TestShop:
     """Test shop page ui elements
@@ -14,7 +15,16 @@ class TestShop:
 
     def setup_method(self):
         """setup class variables"""
-        self.driver = webdriver.Chrome()
+        chrome_options = Options()
+
+        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--window-size=1920,1080")
+
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.url = "https://icb-web.vercel.app/shop"
         self.driver.get(self.url)
 
