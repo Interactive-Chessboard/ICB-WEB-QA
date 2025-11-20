@@ -21,7 +21,7 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@v2
         with:
-          chrome-version: 'latest'
+          chrome-version: '144'
           install-chromedriver: true
       
       - name: Display Python version
