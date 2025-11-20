@@ -18,11 +18,11 @@ jobs:
         with:
           python-version: '3.14'
       
-      - name: Set up Chrome
+      - name: Set up Chrome + ChromeDriver
         uses: browser-actions/setup-chrome@v2
         with:
-          chrome-version: '144'
-          install-chromedriver: true
+          chrome-version: '142'
+          chromedriver-version: '142'
       
       - name: Display Python version
         run: python --version
