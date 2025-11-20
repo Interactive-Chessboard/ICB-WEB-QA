@@ -1,0 +1,76 @@
+# -------------------------
+# Python + Poetry .gitignore
+# -------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Poetry
+poetry.lock
+# (Lock file is optional—if you want deterministic builds, REMOVE this line)
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Poetry-specific virtualenvs
+# (Poetry usually stores them in ~/.cache/pypoetry/ — safe to ignore)
+**/.mypy_cache/
+**/.pytest_cache/
+.poetry/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Test & Coverage
+.coverage
+coverage.xml
+htmlcov/
+pytestdebug.log
+.allure/
+
+# Selenium screenshots or logs
+screenshots/
+logs/
+
+# Jupyter
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# System files
+Thumbs.db
+ehthumbs.db
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Lock or temp
+*.log
+*.tmp
+*.cache
+.cache/
