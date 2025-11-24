@@ -1,9 +1,9 @@
-name: Automation Tests for Interactive chessboard
+name: Automation Tests for Interactive Chessboard
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
+  repository_dispatch:
+    types: [run-tests]
+  workflow_dispatch:
 
 jobs:
   test:
